@@ -19,7 +19,17 @@ const templates = [
   }
 ]
 const TemplateDimension: FC<TTemplateDimension> = ({ height }) => {
-  const customHeight = `h-[${height}vh]`
+  let customHeight = ""
+  switch (height) {
+    case "25": {
+      customHeight = 'h-[25vh]'
+      break
+    }
+    case "40": {
+      customHeight = 'h-[40vh]'
+      break
+    }
+  }
   return (
     <div className='flex flex-row gap-3 items-center h-[80%]'>
       {
