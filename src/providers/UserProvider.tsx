@@ -3,7 +3,7 @@ import { UserResponse } from '@supabase/supabase-js'
 import React, { FC, ReactNode, createContext, useLayoutEffect, useState } from 'react'
 import { readSupabaseUserDetail } from "../supabase/server"
 
-export const UserContext = createContext<UserResponse | undefined>(undefined)
+export const UserContext = createContext<UserResponse | null>(null)
 
 type TUserProvider = {
   children: ReactNode
