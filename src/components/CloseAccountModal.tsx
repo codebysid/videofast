@@ -1,8 +1,8 @@
 import { X } from 'lucide-react'
-import React, { FC, SetStateAction } from 'react'
+import React, { Dispatch, FC, SetStateAction } from 'react'
 
 type TCloseAccountModal = {
-  setOpenAccountModal: SetStateAction,
+  setOpenAccountModal: Dispatch<SetStateAction<boolean>>,
   credit?: boolean
 }
 
